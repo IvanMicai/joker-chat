@@ -1,0 +1,16 @@
+services:  
+  app:
+    image: node:20.12.1
+    container_name: app
+    restart: unless-stopped
+    user: "1000:1000"
+    volumes:
+      - .:/code
+    env_file:
+      - .env.local
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+    working_dir: /code
+    command: npm run dev
