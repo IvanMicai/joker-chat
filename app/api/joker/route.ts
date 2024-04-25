@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server"
-import { buffer } from 'micro';
 import { getJoke } from "@/service/joker"
 import { validateSignature } from "@/service/moveo"
 
