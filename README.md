@@ -14,16 +14,16 @@ Using docker:
 docker compose up # Start a development Server (use -d for background)
 ```
 
-## Implementações futuras:
+## Future Updates:
 
 ### Services
+```
 Joker:
     Add Logs for Ratelimit and Error
 
 Moveo:
-    Find a better way to start (improve integration with NextJS)
-
-
+    Find a better way to start Moveo Chat (improve integration with NextJS)
+```
 ### Qualilty of Life
     Add import sort
     Add github pipeline to run test and block merge without all steps
