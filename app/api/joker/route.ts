@@ -14,6 +14,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
   }
 
   // Get Joke
+  console.log(JSON.parse(rawBody))
   const { context: { user: { lang }}} = JSON.parse(rawBody)
   const joke = await getJoke(lang)
   
