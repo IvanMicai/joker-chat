@@ -6,10 +6,17 @@ const encodeHMAC = (data: crypto.BinaryLike, secret: string): string  => {
 }
 
 export const validateSignature = (data: string, signature: string | null): boolean => {
+    
     if (verifyToken == null) return false
     if (signature == null) return false
     
     const hmac = encodeHMAC(data, verifyToken)
+
+    console.log(verifyToken, "verifyToken")
+    console.log(signature, "signature")
+    console.log(hmac, "hmac")
+    console.log(data, "data")
+    
 
     return hmac == signature
 }
