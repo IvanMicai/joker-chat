@@ -35,7 +35,7 @@ interface TwoPartJoke extends JokeBase {
 
 type Joke = SingleJoke | TwoPartJoke;
 
-const jokerLanguage = (lang: string) => {
+export const jokerLanguage = (lang: string) => {
     switch (lang) {
         case "de": return "de"
         case "es": return "es"
@@ -47,7 +47,7 @@ const jokerLanguage = (lang: string) => {
 }
 
 // Default Messages
-const getDefaultMessage = (lang: string): SingleJoke => ({
+export const getDefaultMessage = (lang: string): SingleJoke => ({
     "type": "single",
     "joke": {
         pt: "Meu humor não esta bom hoje.",
@@ -55,7 +55,7 @@ const getDefaultMessage = (lang: string): SingleJoke => ({
     }[lang] || "My mood is not good today."
 });
 
-const getTiredMessage = (lang: string): SingleJoke => ({
+export const getTiredMessage = (lang: string): SingleJoke => ({
     "type": "single",
     "joke": {
         pt: "Estou cansado de fazer piadas hoje.",
