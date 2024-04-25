@@ -31,7 +31,7 @@ const jokerTired = {
 }
 
 export async function POST(req: NextRequest, res: NextResponse) {
-  const response = await fetch("https://v2.jokeapi.dev/joke/Any")
+  const response = await fetch("https://v2.jokeapi.dev/joke/Any?lang=pt")
 
   if (response.status == 429) {
     // TODO: Log Joker Ratelimit Api
