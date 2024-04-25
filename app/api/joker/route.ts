@@ -35,11 +35,14 @@ export async function POST(req: NextRequest, res: NextResponse) {
   if (apiKey !== req.headers.get("x-api-key")) {
     return Response.json("Not authorized", { status: 401 })
   }
+  const body = await req.json()
 
-  const searchParams = req.nextUrl.searchParams
-  const lang = searchParams.get("lang") != null
-    ? `${searchParams.get("lang")}`
-    : 'en'
+  console.log(body)
+  let { context: { user: { lang }}} = body
+
+
+  // Default value
+  lang = lang ? lang : 'en'
 
   // Validate Language
   if (!['pt', 'en'].includes(lang)) {
