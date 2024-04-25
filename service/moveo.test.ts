@@ -1,5 +1,4 @@
-import { validateSignature } from './moveo'; // Replace 'yourModule' with the path to your module file
-import crypto from 'crypto';
+import crypto from 'crypto'
 
 describe('validateSignature', () => {
     const originalEnv = process.env;
